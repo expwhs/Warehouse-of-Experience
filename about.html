@@ -12,10 +12,38 @@
 <div id="mainTitle"><a href="index.html">경험창고</a></div>
 <div id="category">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active"href="about.html">About</a></li>
-        <li><a href="2.html">Experience</a></li>
-        <li><a href="3.html">Analytics</a></li>
+<!--        <li><a href="index.html">Home</a></li>-->
+<!--        <li><a class="active"href="about.html">About</a></li>-->
+<!--        <li><a href="2.html">Experience</a></li>-->
+<!--        <li><a href="3.html">Analytics</a></li>-->
+        <li><a onclick="
+              fetch('index').then(function(response){
+                response.text().then(function(text){
+                  document.querySelector('html').innerHTML = text;
+                })
+              });
+            ">Home</a></li>
+        <li><a onclick="
+              fetch('about').then(function(response){
+                response.text().then(function(text){
+                  document.querySelector('html').innerHTML = text;
+                })
+              });
+            ">About</a></li>
+        <li><a onclick="
+              fetch('2').then(function(response){
+                response.text().then(function(text){
+                  document.querySelector('html').innerHTML = text;
+                })
+              });
+            ">Experience</a></li>
+        <li><a onclick="
+              fetch('3').then(function(response){
+                response.text().then(function(text){
+                  document.querySelector('html').innerHTML = text;
+                })
+              });
+            ">Analytics</a></li>
     </ul>
 
 </div>

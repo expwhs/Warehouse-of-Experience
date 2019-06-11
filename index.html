@@ -19,28 +19,28 @@
             <li><a onclick="
               fetch('index').then(function(response){
                 response.text().then(function(text){
-                  document.querySelector('body').innerHTML = text;
+                  document.querySelector('html').innerHTML = text;
                 })
               });
             ">Home</a></li>
-        <li><a onclick="
+            <li><a onclick="
               fetch('about').then(function(response){
                 response.text().then(function(text){
-                  document.querySelector('body').innerHTML = text;
+                  document.querySelector('html').innerHTML = text;
                 })
               });
             ">About</a></li>
-        <li><a onclick="
+            <li><a onclick="
               fetch('2').then(function(response){
                 response.text().then(function(text){
-                  document.querySelector('body').innerHTML = text;
+                  document.querySelector('html').innerHTML = text;
                 })
               });
             ">Experience</a></li>
-        <li><a onclick="
+         <li><a onclick="
               fetch('3').then(function(response){
                 response.text().then(function(text){
-                  document.querySelector('body').innerHTML = text;
+                  document.querySelector('html').innerHTML = text;
                 })
               });
             ">Analytics</a></li>
