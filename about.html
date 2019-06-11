@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title >경험창고</title>
+    <title href="#!expwhs">경험창고</title>
     <link rel="stylesheet" href="horizontalNaviBar.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,6 +17,11 @@
             })
         });
     }
+    if(location.hash){
+        fetchPage(location.hash.substr(2))
+    } else{
+        fetchPage('expwhs')
+    }
 </script>
 <div id="mainTitle"><a href="index.html">경험창고</a></div>
 <div id="category">
@@ -25,10 +30,10 @@
 <!--        <li><a class="active"href="about.html">About</a></li>-->
 <!--        <li><a href="2.html">Experience</a></li>-->
 <!--        <li><a href="3.html">Analytics</a></li>-->
-        <li><a onclick="fetchPage('index')">Home</a></li>
-        <li><a onclick="fetchPage('about')">About</a></li>
-        <li><a onclick="fetchPage('2')">Experience</a></li>
-        <li><a onclick="fetchPage('3')">Analytics</a></li>
+        <li><a href="#!home" onclick="fetchPage('index')">Home</a></li>
+        <li><a href="#!about" onclick="fetchPage('about')">About</a></li>
+        <li><a href="#!2" onclick="fetchPage('2')">Experience</a></li>
+        <li><a href="#!3" onclick="fetchPage('3')">Analytics</a></li>
     </ul>
 
 </div>
