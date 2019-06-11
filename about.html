@@ -9,6 +9,15 @@
     <script src="color.js"></script>
 </head>
 <body>
+<script>
+    function fetchPage(name){
+        fetch(name).then(function(response){
+            response.text().then(function(text){
+                document.querySelector('html').innerHTML = text;
+            })
+        });
+    }
+</script>
 <div id="mainTitle"><a href="index.html">경험창고</a></div>
 <div id="category">
     <ul>
@@ -16,34 +25,10 @@
 <!--        <li><a class="active"href="about.html">About</a></li>-->
 <!--        <li><a href="2.html">Experience</a></li>-->
 <!--        <li><a href="3.html">Analytics</a></li>-->
-        <li><a onclick="
-              fetch('index').then(function(response){
-                response.text().then(function(text){
-                  document.querySelector('html').innerHTML = text;
-                })
-              });
-            ">Home</a></li>
-        <li><a onclick="
-              fetch('about').then(function(response){
-                response.text().then(function(text){
-                  document.querySelector('html').innerHTML = text;
-                })
-              });
-            ">About</a></li>
-        <li><a onclick="
-              fetch('2').then(function(response){
-                response.text().then(function(text){
-                  document.querySelector('html').innerHTML = text;
-                })
-              });
-            ">Experience</a></li>
-        <li><a onclick="
-              fetch('3').then(function(response){
-                response.text().then(function(text){
-                  document.querySelector('html').innerHTML = text;
-                })
-              });
-            ">Analytics</a></li>
+        <li><a onclick="fetchPage('index')">Home</a></li>
+        <li><a onclick="fetchPage('about')">About</a></li>
+        <li><a onclick="fetchPage('1')">Experience</a></li>
+        <li><a onclick="fetchPage('2')">Analytics</a></li>
     </ul>
 
 </div>

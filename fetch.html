@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function fetchPage(name){
+        fetch(name).then(function(response){
+            response.text().then(function(text){
+                document.querySelector('html').innerHTML = text;
+            })
+        });
+    }
+</script>
     <input type="button" value="fetch" onclick="
     // fetch('css').then(function(response){
     //     response.text().then(function(text){
